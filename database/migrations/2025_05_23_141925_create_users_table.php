@@ -3,6 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 return new class extends Migration
 {
@@ -21,6 +23,20 @@ return new class extends Migration
             $table->timestamps();
             $table->enum('role', ['ADMINISTRADOR', 'OPERADOR'])->default('OPERADOR');
         });
+
+        // Insertar usuario por defecto
+        // Crear usuario administrador inicial
+    
+
+        DB::table('users')->insert([
+            'name' => 'Administrador',
+            'email' => 'minitas@gmail.com',
+            'password' => Hash::make('minitas123'),
+            'role' => 'ADMINISTRADOR',
+            'email_verified_at' => now(), // Marcar como verificado
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
     }
 
     /**
