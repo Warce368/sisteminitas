@@ -42,6 +42,7 @@
     <table class="darkmode">
         <thead class="table-dark text-center">
             <tr>
+                
                 <th>Acción</th>
                 <th>Tabla</th>
                 <th>ID Registro</th>
@@ -54,6 +55,7 @@
         <tbody class="text-center">
             @foreach($logs as $log)
             <tr>
+                
                 <td>{{ $log->accion }}</td>
                 <td>{{ $log->tabla }}</td>
                 <td>{{ $log->registro_id }}</td>

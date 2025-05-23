@@ -10,10 +10,10 @@ class RegistrarIntentoFallido
     public function handle(Failed $event): void
     {
         Auditoria::create([
-            'user_id'     => null,
+            'user_id'     => 'Desconocido',
             'accion'      => 'login_failed',
             'tabla'       => 'ninguna',
-            'registro_id' => null,
+            'registro_id' => 'ninguna',
             'descripcion' => 'Intento de inicio de sesión fallido con email: ' . ($event->credentials['email'] ?? 'desconocido'),
         ]);
     }
