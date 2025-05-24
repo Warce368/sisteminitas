@@ -89,5 +89,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/pagos/sincronizar', [PagoController::class, 'sincronizarClientesMesActual'])->name('pagos.sincronizar');
 
     // Ruta raíz redirige a vista de inicio
-    
+    Route::get('/', function () {
+        return view('Inicio.index');
+    });
 });
