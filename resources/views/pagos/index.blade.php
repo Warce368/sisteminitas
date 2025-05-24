@@ -27,7 +27,11 @@
     <!-- Filtro de mes y año -->
     <div class="col-12 col-sm-6 col-md-3">
         <label class="form-label mb-1 text-white">Hasta:</label>
-        @php\Carbon\Carbon::setLocale('es');@endphp
+        @php
+
+            \Carbon\Carbon::setLocale('es');
+            
+        @endphp
         <select name="mes" class="form-select bg-dark text-white border-secondary small-select"
             onchange="this.form.submit()">
             @foreach ($mesesAnios as $item)
