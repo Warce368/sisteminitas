@@ -1,12 +1,13 @@
 <?php
 
 namespace App\Models;
-
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Direccion; // Asegúrate de importar el modelo Direccion
 
 class Zona extends Model
 {
+    use HasFactory;
     protected $table = 'zona';
     protected $primaryKey = 'id_zona';
     public $timestamps = false;

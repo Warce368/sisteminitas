@@ -128,10 +128,19 @@
     </a>
 
     <!-- -->
-    <a href="" target="_blank"
+    <a href="" class="invisible-link"  target="_blank"
         style="position: absolute;
-        top: 348px; left: 580px; padding: 10px 17px; background-color: red; color: white; text-decoration: none; border-radius: 5px;">
+        top: 348px; left: 580px; padding: 10px 17px; text-decoration: none; border-radius: 5px;">
         Router 1_____
     </a>
 </div>
+
+<style>
+    .invisible-link {
+        color: transparent;             /* Oculta el texto */
+        background-color: transparent; /* Oculta el fondo */
+        border: none;                  /* Opcional: sin borde */
+    }
+</style>
+
 @endsection

@@ -1,13 +1,14 @@
 <?php
 
 namespace App\Models;
-
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Direccion; // 
 use App\Models\Cliente; // 
 
 class Antena extends Model
 {
+    use HasFactory;
     protected $table = 'antenas'; // Nombre de la tabla en la base de datos
     protected $primaryKey = 'id_antena'; // Clave primaria de la tabla
      // Si no usas timestamps, ponlo en false

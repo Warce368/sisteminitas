@@ -31,7 +31,7 @@ return new class extends Migration
         DB::table('users')->insert([
             'name' => 'Administrador',
             'email' => 'minitas@gmail.com',
-            'password' => Hash::make('minitas123'),
+            'password' => Hash::make('marcello'),
             'role' => 'ADMINISTRADOR',
             'email_verified_at' => now(), // Marcar como verificado
             'created_at' => now(),

@@ -1,13 +1,14 @@
 <?php
 
 namespace App\Models;
-
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Servicio; // Asegúrate de importar el modelo Zona
 use App\Models\Direccion; // Asegúrate de importar el modelo Direccion
 use App\Models\Pago; // Asegúrate de importar el modelo Pago
 class Cliente extends Model
 {
+    use HasFactory;
     protected $table = 'clientes'; // Nombre de la tabla en la base de datos
     protected $primaryKey = 'id_cliente'; // Nombre de la clave primaria
     protected $fillable = [
