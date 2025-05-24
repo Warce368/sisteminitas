@@ -10,7 +10,7 @@ class RegistrarIntentoFallido
     public function handle(Failed $event): void
     {
         Auditoria::create([
-            'user_id'     => 0,
+            'user_id'     => null,
             'accion'      => 'login_failed',
             'tabla'       => 'ninguna',
             'registro_id' => 0,
