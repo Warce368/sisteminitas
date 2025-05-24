@@ -38,7 +38,7 @@ Route::post('/login', function (Request $request) {
 
 // Ruta para vista de inicio, protegida con autenticación
 Route::get('/inicio', function () {
-    return view('inicio.index');
+    return view('Inicio.index');
 })->middleware('auth');
 
 // Ruta para logout
@@ -89,7 +89,5 @@ Route::middleware('auth')->group(function () {
     Route::post('/pagos/sincronizar', [PagoController::class, 'sincronizarClientesMesActual'])->name('pagos.sincronizar');
 
     // Ruta raíz redirige a vista de inicio
-    Route::get('/', function () {
-        return view('inicio.index');
-    });
+    
 });
